@@ -5,7 +5,7 @@
 <!-- PROJECT LOGO -->
 <div align="center">
   <img src="images/zookeeper.svg" alt="Logo" width="450" height="250">
-  <h3 align="center">Appache Zookeeper</h3>
+  <h3 align="center">Apache Zookeeper</h3>
 </div>
 
 <!-- TABLE OF CONTENTS -->
