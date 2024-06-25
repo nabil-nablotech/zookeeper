@@ -58,12 +58,12 @@ public class SyncPrimitive implements Watcher, CommandLineRunner {
                     "Please use the following pattern to successfully run the proccess you need to excecute");
             System.err.println(
                     "mvn spring-boot:run -Dspring-boot.run.arguments=\"[producer|consumer|barrier] [number]\"");
-
+            throw (new Exception("Invalid arguments!"));
         }
 
     }
 
-    public void queueTest(String args[]) {
+    public void queueTest(String args[]) throws Exception {
         Queue q = new Queue(zookeeperServerUri, "/app1");
 
         System.out.println("Input: " + zookeeperServerUri);
@@ -92,6 +92,8 @@ public class SyncPrimitive implements Watcher, CommandLineRunner {
                 } catch (InterruptedException e) {
                 }
             }
+        } else {
+            throw (new Exception("Invalid arguments!"));
         }
     }
 
